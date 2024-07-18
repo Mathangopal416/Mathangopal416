@@ -1,23 +1,18 @@
-var totalsum =0;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
-function plusClick(input1) 
-{
-    debugger
-    totalsum = totalsum +parseInt(input1);
-    var displayElement = document.getElementById("display");
-    displayElement.value="";
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
 
-function equalClick(input2)
-{
-    var displayElement = document.getElementById("display");
-    displayElement.value = totalsum + parseInt(input2);
-    totalsum=0;
-}
-
-function clearClick()
-{
-    var displayElement = document.getElementById("display");
-    displayElement.value="";
-    totalsum=0;
-}
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
